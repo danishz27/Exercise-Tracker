@@ -50,51 +50,6 @@ date: Winter 2026
 | `isEmpty()` | after popping all elements           | returns true                                                     |
 
 
-## Why Zach is a bad programmer
-
-BadStack1
-
--   isEmpty() always returns true, even after pushing elements.
--   Because of this, peek() and pop() throw "empty stack" exceptions
-    even when the stack has data.
--   size() appears to update correctly, but the stack logic ignores
-    stored elements.
-
-------------------------------------------------------------------------
-
-BadStack2
-
--   pop() does not properly remove elements from the stack.
--   The size is not decremented after popping.
--   The same top element is returned repeatedly,
-    meaning the top pointer is not updated.
--   The stack never becomes empty after popping all elements.
-
-------------------------------------------------------------------------
-
-BadStack3
-
--   push() does not correctly update the size (size remains incorrect).
--   peek() incorrectly modifies the stack (it reduces size when it
-    should not).
--   Size tracking is inconsistent across operations.
-
-------------------------------------------------------------------------
-
-BadStack4
-
--   peek() removes the top element (acts like pop()).
--   This causes the size to decrease after calling peek(), which should
-    not happen.
--   Other methods (push, pop, isEmpty) behave correctly.
-
-------------------------------------------------------------------------
-
-BadStack5
-
--   No issues detected.
--   All tests passed, indicating a correct implementation.
-
 
 ## Edge Cases Handling
 * Does not let a user update their username to an existing username.
